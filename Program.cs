@@ -36,6 +36,14 @@ namespace Exercise3_058
                     return (false); //return false if node not found
         }
 
+        public bool listEmpty()
+        {
+            if(LAST==null) 
+                return true;
+            else
+                return false;
+        }
+
     }
     
     internal class Program
