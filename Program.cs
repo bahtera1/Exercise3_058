@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,41 @@ namespace Exercise3_058
         {
             LAST = null;
         }
+
+        //buat public void untuk addnode
+        public void addNode()
+        {
+            int nim;
+            string nm;
+            Console.Write("\nEnter the roll number of the student : ");
+            nim = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\nEnter the name of student : ");
+            nm = Console.ReadLine();
+            Node newnode = new Node();
+            newnode.rollNumber = nim;
+            newnode.name = nm;
+
+            //jika node yg dimasukan adalah node terakhir
+            Node previous, current = LAST;
+            previous = LAST;
+            current = LAST;
+
+            while ((current != null) && (nim >= current.rollNumber))
+            {
+                if (nim == current.rollNumber)
+                {
+                    Console.WriteLine("\nDuplicate roll Numbers not Allowed \n");
+                    return;
+                }
+                previous = current;
+                current = current.next;
+            }
+          //jika kondisi diatsa suadah diajankan prev dan current diposisikan sedemikan rupa shingga ada posisi untuk node baru
+            newnode.next = current;
+            previous.next = newnode;
+        }
+
+
 
         public bool Search(int rollNo, ref Node previous,ref Node current)
         //search for the specified node
