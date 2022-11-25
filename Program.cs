@@ -113,6 +113,14 @@ namespace Exercise3_058
                                 }
                             }
                             break;
+                        case '3':
+                            {
+                                obj.firstNode();
+                            }
+                            break;
+                        case '4':
+                            return;
+                        default;
                     }
                 }
             }
