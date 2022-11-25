@@ -50,7 +50,7 @@ namespace Exercise3_058
                 Console.WriteLine("\n List is Empty");
             else
             {
-                Console.WriteLine("\n Records in the list are:\n);
+                Console.WriteLine("\n Records in the list are:\n");
                 node currentNode;
                 currentNode=LAST.next;
                 while(currentNode !=LAST)
@@ -62,7 +62,14 @@ namespace Exercise3_058
             }
         }
         
+        public void firstNode()
+        {
+            if(listEmpty())
+                Console.WriteLine("\nList is Empty");
+            else
+                Console.WriteLine("\nThe first record in the list is:\n\n" + LAST.next.rollNumber + " " + LAST.next.name);
 
+        }
     }
     
     internal class Program
