@@ -87,7 +87,32 @@ namespace Exercise3_058
                     char ch=Convert.ToChar(Console.ReadLine());
                     switch(ch)
                     {
-
+                        case '1':
+                            {
+                                obj.traverse();
+                            }
+                            break;
+                        case '2':
+                            {
+                                if(obj.listEmpty() == true)
+                                {
+                                    Console.WriteLine("\nLisy is Empty");
+                                    break;
+                                }
+                                Node prev, curr;
+                                prev = curr = null;
+                                Console.Write("\nEnter the roll number of the students whose records is to be searched: ");
+                                int num =Convert.ToInt32(Console.ReadLine());
+                                if(obj.Search(num,ref prev,ref curr)==false)
+                                    Console.WriteLine("\nRecord Not found");
+                                else
+                                {
+                                    Console.WriteLine("\nRecord found");
+                                    Console.WriteLine("\nRoll Number: " + curr.rollNumber);
+                                    Console.WriteLine("\nName"+ curr.name);
+                                }
+                            }
+                            break;
                     }
                 }
             }
