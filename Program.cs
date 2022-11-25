@@ -52,8 +52,9 @@ namespace Exercise3_058
                 current = current.next;
             }
           //jika kondisi diatsa suadah diajankan prev dan current diposisikan sedemikan rupa shingga ada posisi untuk node baru
-            newnode.next = current;
-            previous.next = newnode;
+            newnode.next = LAST.next;
+            LAST.next = newnode;
+            LAST = newnode;
         }
 
 
@@ -118,7 +119,7 @@ namespace Exercise3_058
                     Console.WriteLine("1. View all the records in the list");
                     Console.WriteLine("2. Search for a record in the list");
                     Console.WriteLine("3. Display the first record in the list");
-                    Console.WriteLine("4. Exit");
+                    Console.WriteLine("5. Exit");
                     Console.WriteLine("\n Enter your choice(1-4):");
                     char ch=Convert.ToChar(Console.ReadLine());
                     switch(ch)
@@ -149,12 +150,18 @@ namespace Exercise3_058
                                 }
                             }
                             break;
+
                         case '3':
                             {
                                 obj.firstNode();
                             }
                             break;
                         case '4':
+                            {
+                                obj.addNode();
+                            }
+                            break;
+                        case '5':
                             return;
                         default:
                             {
