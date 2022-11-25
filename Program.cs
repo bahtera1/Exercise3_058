@@ -51,11 +51,11 @@ namespace Exercise3_058
             else
             {
                 Console.WriteLine("\n Records in the list are:\n");
-                node currentNode;
+                Node currentNode;
                 currentNode=LAST.next;
                 while(currentNode !=LAST)
                 {
-                    Console.WriteLine(currentNode.rollNumber + "  " + cureentNode.name + "\n");
+                    Console.WriteLine(currentNode.rollNumber + "  " + currentNode.name + "\n");
                     currentNode = currentNode.next;
                 }
                 Console.Write(LAST.rollNumber + " " +LAST.name+"\n");
@@ -70,12 +70,13 @@ namespace Exercise3_058
                 Console.WriteLine("\nThe first record in the list is:\n\n" + LAST.next.rollNumber + " " + LAST.next.name);
 
         }
-    }
-    
-    internal class Program
-    {
+
         static void Main(string[] args)
         {
+            CircularList obj = new CircularList
+
         }
     }
+    
+    
 }
