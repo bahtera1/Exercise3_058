@@ -120,14 +120,20 @@ namespace Exercise3_058
                             break;
                         case '4':
                             return;
-                        default;
+                        default:
+                            {
+                                Console.WriteLine("Invalid Option");
+                                break;
+                            }
                     }
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e.ToString());
                 }
             }
 
-
         }
-    }
-    
+    } 
     
 }
